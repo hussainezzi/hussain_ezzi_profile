@@ -1,12 +1,13 @@
-
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem } from "@/components/ui/navigation-menu"
 
 export default function Header() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* 1. Top Navigation */}
-      <header className="flex items-center justify-between px-8 py-4">
-        <h1 className="text-2xl font-bold text-indigo-600 px-21">  Hussain Ezzi</h1>
+      <header className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <h1 className="text-2xl font-bold text-indigo-600 px-21">  Hussain Ezzi</h1>
+        </div>
         <NavigationMenu>
           <NavigationMenuList className="flex space-x-6 text-sm font-medium">
             <NavigationMenuItem>
@@ -39,6 +40,7 @@ export default function Header() {
       </header>
 
       {/* 2. Hero Section */}
+      <section className="max-w-5xl mx-auto  px-6 py-16">
       <main className="flex flex-col md:flex-row items-center justify-center px-30 py-16 gap-10">
         {/* Left: Greeting Text */}
         <div className="md:w-1/2 space-y-4">
@@ -64,6 +66,7 @@ export default function Header() {
           </div>
         </div>
       </main>
+      </section>
     </div>
   )
 }
